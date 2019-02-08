@@ -1,5 +1,5 @@
-# hrext07-my-cruddy-app
-Create Read Update and Delete framework using JS
+# FoodHub
+Social media platform to connect with friends over food. Write reviews, favorite restaurants, and see where your friends are eating!
 
 
 ## Tasks
@@ -12,4 +12,14 @@ Create Read Update and Delete framework using JS
 - [ ] UI/UX considerations (how are we going to use this)
 
 ### Advanced Reqs
-- [ ] Item that I added goes here...
+---- MVP Requirements
+- [ ] Ability to add Profile/Restaurant
+- [ ] Ability to favorite restaurant & add to profile
+- [ ] write simple reviews/ratings
+---- More functionality
+- [ ] add tags to restaurants
+- [ ] Write a review/integrate yelp reviews
+- [ ] intergrate food order service/reservations
+- [ ] buttons to share on social media
+- [ ] categories of favorites
+
