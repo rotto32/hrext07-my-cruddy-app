@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HREXT07 R00lz!</title>
+  <title>FoodHub</title>
   <script
           src="https://code.jquery.com/jquery-3.3.1.js"
           integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -24,19 +24,32 @@ container for the response-feedback (start with alert)
 -->
 </head>
 <body>
+  <div class="title">
+      <img class="top-logo" src="./Resources/imgs/peach.png">
+    <h1>FoodHub</h1>
+    <img class="top-logo" src="./Resources/imgs/dishes.png">
+  </div>
 
 <div class="container-main">
-  <header>My Cruddy App</header>
   <div class="container-form">
-    <input type="text" class="input-key" placeholder="enter key">
-    <input type="text" class="input-value" placeholder="enter value">
-    <button class="btn-add">Submit</button>
-    <button class="btn-update">Update</button>
-    <button class="btn-delete">Delete</button>
-    <button class="btn-clear">Clear</button>
+    <div class="inputs">
+    <input type="text" class="input-name" placeholder="What's your name?">
+    <input type="text" class="input-description" placeholder="A bit about you?">
   </div>
+  <div class="buttons">
+    <button class="new-profile">Create a Profile</button>
+    <button class="btn-add">Add</button>
+    <!-- <button class="btn-update">Update</button> -->
+    <!-- <button class="btn-delete">Delete</button> -->
+    <button class="btn-clear">Delete Literally Everything</button>
+  </div>
+ </div>
   <div class="container-data"></div>
 </div>
+
+<footer>
+  <p>CopyRight Rachael Otto</p>
+  <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"          title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"          title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
 </body>
 </html>

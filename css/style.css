@@ -1,0 +1,25 @@
+.title{
+	display: flex;
+	font-size: 48px;
+	justify-content: space-around;
+	align-items: center;
+	background-color: purple;
+}
+
+.top-logo{
+	height: 100px;
+
+}
+
+.container-form{
+}
+
+.inputs{
+	display: none;
+	flex-direction: column;
+}
+
+.btn-add{
+	display: none;
+}
+

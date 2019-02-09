@@ -17,6 +17,7 @@ Social media platform to connect with friends over food. Write reviews, favorite
 - [ ] Ability to favorite restaurant & add to profile
 - [ ] write simple reviews/ratings
 ---- More functionality
+- [ ] Update storage to be more permanent (MongoDB?)
 - [ ] add tags to restaurants
 - [ ] Write a review/integrate yelp reviews
 - [ ] intergrate food order service/reservations
