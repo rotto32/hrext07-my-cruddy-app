@@ -17,7 +17,7 @@ $(document).ready(function() {
         $('.inputs').css({ 'display': 'none' });
         $('.btn-add-person').css({ 'display': 'none' });
         $('.new-restaurant').css({ 'display': 'block' });
-        $('.container-data').prepend('<div class="user-profile-name">' + profileName + '</div> <div class="user-profile-description">' + profileDescription + '</div>');
+        $('.users').append('<div class="user-profile-name">' + profileName + '</div> <div class="user-profile-description">' + profileDescription + '</div>');
     });
 
 
@@ -27,9 +27,9 @@ $(document).ready(function() {
         localStorage.setItem(profileName, profileDescription);
         $('.new-profile').css({ 'display': 'block' });
         $('.inputs').css({ 'display': 'none' });
-        $('.btn-add').css({ 'display': 'none' });
+        $('.btn-add-restaurant').css({ 'display': 'none' });
         $('.new-restaurant').css({ 'display': 'block' });
-        $('.container-data').prepend('<div class="restaurant-profile-name">' + profileName + '</div> <div class="restaurant-profile-description">' + profileDescription + '</div>');
+        $('.restaurants').append('<div class="restaurant-profile-name">' + profileName + '</div> <div class="restaurant-profile-description">' + profileDescription + '</div>');
     });
 
     $('.new-profile').on('click', function(e) {

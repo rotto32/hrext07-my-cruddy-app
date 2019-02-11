@@ -7,10 +7,12 @@ Social media platform to connect with friends over food. Write reviews, favorite
 - [x] Ability to create restaurant profile
 - [ ] Ability to add favorite restaurants to personal profile
 - [x] Ability to create multiple personal profiles
+- [ ] Load pre-existing data onto page on page load
 
 ---Minor----
 - [x] Change the description input to a larger text input box
 - [ ] Add the ability to upload an image
+- [x] Add a div around each profile (personal or restaurant)
 
 ---Appearance---
 - [x] Update the jumbotron with icons
@@ -18,6 +20,7 @@ Social media platform to connect with friends over food. Write reviews, favorite
 - [ ] Update colors
 - [ ] Change the font
 - [ ] Place restaurants and profiles in different columns
+- [ ] Change the description input box to begin typing at the top of the box rather than the middle
 
 
 ##Timeline
@@ -25,6 +28,7 @@ Social media platform to connect with friends over food. Write reviews, favorite
  Added ability to add restaurant profiles on 2/11
  Made input box larger on 2/11
  Added ability to create multiple profiles at once on 2/11
+ Added a div around users and restaurants in order to style profiles on 2/11
 
 
 ----To Do Still

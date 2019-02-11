@@ -30,3 +30,9 @@
 .btn-add-restaurant{
 	display: none;
 }
+
+.container-data{
+	display: flex;
+	justify-content: space-around;
+}
+
