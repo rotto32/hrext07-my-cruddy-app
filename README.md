@@ -4,12 +4,12 @@ Social media platform to connect with friends over food. Write reviews, favorite
 
 ## Individual Tasks
 ----Major----
-- [ ] Ability to create restaurant profile
+- [x] Ability to create restaurant profile
 - [ ] Ability to add favorite restaurants to personal profile
-- [ ] Ability to create multiple personal profiles
+- [x] Ability to create multiple personal profiles
 
 ---Minor----
-- [ ] Change the description input to a larger text input box
+- [x] Change the description input to a larger text input box
 - [ ] Add the ability to upload an image
 
 ---Appearance---
@@ -17,11 +17,17 @@ Social media platform to connect with friends over food. Write reviews, favorite
 - [ ] style profiles
 - [ ] Update colors
 - [ ] Change the font
+- [ ] Place restaurants and profiles in different columns
 
 
 ##Timeline
- 2/11 - Complete ability to add restaurant profile
- 2/11 - Make description input larger
+----Completed
+ Added ability to add restaurant profiles on 2/11
+ Made input box larger on 2/11
+ Added ability to create multiple profiles at once on 2/11
+
+
+----To Do Still
  2/11 - style profiles
  2/12 - Add ability to add fav restaurants to personal profile
  2/12 - Upload an image

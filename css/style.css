@@ -11,6 +11,10 @@
 
 }
 
+.input-description {
+	height: 200px;
+}
+
 .container-form{
 }
 
@@ -19,7 +23,10 @@
 	flex-direction: column;
 }
 
-.btn-add{
+.btn-add-person{
 	display: none;
 }
 
+.btn-add-restaurant{
+	display: none;
+}
