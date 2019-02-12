@@ -17,7 +17,8 @@ $(document).ready(function() {
         $('.inputs').css({ 'display': 'none' });
         $('.btn-add-person').css({ 'display': 'none' });
         $('.new-restaurant').css({ 'display': 'block' });
-        $('.users').append('<div class="user-profile-name">' + profileName + '</div> <div class="user-profile-description">' + profileDescription + '</div>');
+        $('.users').append('<div class="user-profile-name"><h3>' + profileName + '</h3><p>' + profileDescription + '</p></div>');
+         $(".user-profile-name").append("<div class='favorites'><h3>Favorites</h3></div>");
     });
 
 
@@ -29,7 +30,7 @@ $(document).ready(function() {
         $('.inputs').css({ 'display': 'none' });
         $('.btn-add-restaurant').css({ 'display': 'none' });
         $('.new-restaurant').css({ 'display': 'block' });
-        $('.restaurants').append('<div class="restaurant-profile-name">' + profileName + '</div> <div class="restaurant-profile-description">' + profileDescription + '</div>');
+        $('.restaurants').append('<div class="restaurant-profile-name"><h3>' + profileName + '</h3> <p>' + profileDescription + '</p><button class="fav">Add to favorites</button></div>');
     });
 
     $('.new-profile').on('click', function(e) {
@@ -48,6 +49,17 @@ $(document).ready(function() {
         $('.btn-add-restaurant').css({ 'display': 'block' });
         $('.new-profile').css({ 'display': 'none' });
         $('.new-restaurant').css({ 'display': 'none' });
+    });
+
+    $(document).on('click', '.fav', function(e){
+      var tempData = $(".restaurant-profile-name").html();
+      console.log(typeof tempData);
+      tempData = tempData.replace('fav', 'remove-fav');
+      tempData = tempData.replace('Add to favorites', 'Remove from favorites');
+      console.log(tempData);
+      $(".favorites").append(tempData);
+
+
     });
 
     $('.btn-clear').click(function() {
