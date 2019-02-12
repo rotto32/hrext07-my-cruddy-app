@@ -21,6 +21,7 @@ Social media platform to connect with friends over food. Write reviews, favorite
 - [ ] Change the font
 - [ ] Place restaurants and profiles in different columns
 - [ ] Change the description input box to begin typing at the top of the box rather than the middle
+- [ ] Style buttons
 
 
 ##Timeline
@@ -32,10 +33,14 @@ Social media platform to connect with friends over food. Write reviews, favorite
 
 
 ----To Do Still
- 2/11 - style profiles
+ 2/12 - style profiles more
  2/12 - Add ability to add fav restaurants to personal profile
  2/12 - Upload an image
  2/12 - update colors/font
+ 2/13 - Load local storage on page load
+ 2/13 - CHange the font
+ 2/13 - style buttons
+ 2/13 - type in the middle of the input box
 
 
 ### MVP Reqs
