@@ -7,6 +7,21 @@ interact with localstorage
 
 $(document).ready(function() {
 
+    $(window).on('load', function(e) {
+        if (localStorage.length > 0) {
+            for (var prop in localStorage) {
+                if (prop !== "length" && prop !== "key" && prop !== "setItem" && prop !== "getItem" && prop !== "removeItem" && prop !== "clear") {
+
+                    $('.other-users').append('<div class="user-profile-name"><h3>' + prop + '</h3><p>' + localStorage[prop] + '</p></div>');
+                }
+
+            }
+
+        }
+
+
+    });
+
 
 
     $('.btn-add-person').on('click', function(e) {
@@ -17,12 +32,13 @@ $(document).ready(function() {
         $('.inputs').css({ 'display': 'none' });
         $('.btn-add-person').css({ 'display': 'none' });
         $('.new-restaurant').css({ 'display': 'block' });
-        $('.users').append('<div class="user-profile-name"><h3>' + profileName + '</h3><p>' + profileDescription + '</p></div>');
-         $(".user-profile-name").append("<div class='favorites'><h3>Favorites</h3></div>");
+        $('.your-profile').html('');
+        $('.your-profile').append('<div class="user-profile-name"><h3>' + profileName + '</h3><p>' + profileDescription + '</p><div class="favorites"><h3>Favorites</h3></div></div>');
+
     });
 
 
-      $('.btn-add-restaurant').on('click', function(e) {
+    $('.btn-add-restaurant').on('click', function(e) {
         var profileName = $('.input-name').val();
         var profileDescription = $('.input-description').val();
         localStorage.setItem(profileName, profileDescription);
@@ -39,6 +55,7 @@ $(document).ready(function() {
         $('.btn-add-person').css({ 'display': 'block' });
         $('.new-profile').css({ 'display': 'none' });
         $('.new-restaurant').css({ 'display': 'none' });
+        $('.fav').css({ 'display': 'inline' });
 
 
     });
@@ -51,13 +68,12 @@ $(document).ready(function() {
         $('.new-restaurant').css({ 'display': 'none' });
     });
 
-    $(document).on('click', '.fav', function(e){
-      var tempData = $(".restaurant-profile-name").html();
-      console.log(typeof tempData);
-      tempData = tempData.replace('fav', 'remove-fav');
-      tempData = tempData.replace('Add to favorites', 'Remove from favorites');
-      console.log(tempData);
-      $(".favorites").append(tempData);
+    $(document).on('click', '.fav', function(e) {
+        var tempData = $(".restaurant-profile-name").html();
+        tempData = tempData.replace('fav', 'remove-fav');
+        tempData = tempData.replace('Add to favorites', 'Remove from favorites');
+        $(".favorites").append(tempData);
+        $(".fav").css({ 'display': 'none' });
 
 
     });

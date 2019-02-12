@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>FoodHub</title>
-  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-  <script
-          src="https://code.jquery.com/jquery-3.3.1.js"
-          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-          crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
-  <script src="app/app.js"></script>
-  <link rel="stylesheet" href="css/style.css">
-
-
-  <!--
+    <meta charset="UTF-8">
+    <title>FoodHub</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="app/app.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!--
 
 √ create container
 √ create button
@@ -24,55 +20,59 @@
 container for the response-feedback (start with alert)
 -->
 </head>
+
 <body>
-  <div class="title">
-      <img class="top-logo" src="./Resources/imgs/peach.png">
-    <h1>FoodHub</h1>
-    <img class="top-logo" src="./Resources/imgs/dishes.png">
+    <div class="title">
+        <img class="top-logo" src="./Resources/imgs/peach.png">
+        <h1>FoodHub</h1>
+        <img class="top-logo" src="./Resources/imgs/dishes.png">
   </div>
-
-<div class="container-main">
-  <div class="container-form">
-    <div class="inputs">
-    <input type="text" class="input-name" placeholder="What's your name?">
-    <input type="text" class="input-description" placeholder="A bit about you?">
-  </div>
-  <div class="buttons">
-    <button class="new-profile">Create a Profile</button>
-    <button class="new-restaurant">Add a Restaurant Profile</button>
-    <button class="btn-add-person">Add</button>
-    <button class="btn-add-restaurant">Add</button>
-    <!-- <button class="btn-update">Update</button> -->
-    <!-- <button class="btn-delete">Delete</button> -->
-    <!-- <button class="btn-clear">Delete Literally Everything</button> -->
-  </div>
- </div>
-  <div class="container-data">
-    <div class="users">
-      <h3>User Profiles</h3>
-      <div class="user-profile-name">
-        <h3>Louise Belcher</h3>
-        <p>I can give you the best recommendations for places to eat. Fee non-negotiable.</p>
-        <div class='favorites'>
-          <h3>Favorites</h3>
+        <div class="container-main">
+            <div class="container-form">
+                <div class="inputs">
+                    <input type="text" class="input-name" placeholder="What's your name?">
+                    <input type="text" class="input-description" placeholder="A bit about you?">
+                </div>
+                <div class="buttons">
+                    <button class="new-profile">Create a Profile</button>
+                    <button class="new-restaurant">Add a Restaurant Profile</button>
+                    <button class="btn-add-person">Add</button>
+                    <button class="btn-add-restaurant">Add</button>
+                    <!-- <button class="btn-update">Update</button> -->
+                    <!-- <button class="btn-delete">Delete</button> -->
+                    <!-- <button class="btn-clear">Delete Literally Everything</button> -->
+                </div>
+            </div>
+            <div class="container-data">
+                <div class="users">
+                    <h3>Your Profile</h3>
+                    <div class="your-profile">
+                        <div class="user-profile-name">
+                            <h3>Louise Belcher</h3>
+                            <p>I can give you the best recommendations for places to eat. Fee non-negotiable.</p>
+                            <div class='favorites'>
+                                <h3>Favorites</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="other-users">
+                        <h3>Other Users</h3>
+                    </div>
+                </div>
+                <div class="restaurants">
+                    <h3>Restaurant Profiles</h3>
+                    <div class="restaurant-profile-name">
+                        <h3>Bob's Burgers</h3>
+                        <p>A local, family run joint for reasonably-priced gourmet burgers</p>
+                        <button class="fav">Add to favorites</button>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-clear">Delete Literally Everything</button>
         </div>
-      </div>
-    </div>
-    <div class="restaurants">
-      <h3>Restaurant Profiles</h3>
-      <div class="restaurant-profile-name">
-        <h3>Bob's Burgers</h3>
-        <p>A local, family run joint for reasonably-priced gourmet burgers</p>
-        <button class="fav">Add to favorites</button>
-      </div>
-    </div>
-  </div>
-  <button class="btn-clear">Delete Literally Everything</button>
-</div>
-
-<footer>
-  <p>CopyRight Rachael Otto</p>
-  <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"          title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"          title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-
+        <footer>
+            <p>CopyRight Rachael Otto</p>
+            <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"          title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"          title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 </body>
+
 </html>

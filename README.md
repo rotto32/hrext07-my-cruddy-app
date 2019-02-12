@@ -7,7 +7,7 @@ Social media platform to connect with friends over food. Write reviews, favorite
 - [x] Ability to create restaurant profile
 - [x] Ability to add favorite restaurants to personal profile
 - [x] Ability to create multiple personal profiles
-- [ ] Load pre-existing data onto page on page load
+- [x] Load pre-existing data onto page on page load
 - [ ] Using the 'Delete everything' button removes the divs which have users and restaurants appended to them, so unable to add more stuff after using the delete button. Need to fix
 - [ ] Remove favorite from user
 - [ ] Adding to favorites only adds first restaurant, and adds to all profiles
@@ -16,17 +16,17 @@ Social media platform to connect with friends over food. Write reviews, favorite
 - [x] Change the description input to a larger text input box
 - [ ] Add the ability to upload an image
 - [x] Add a div around each profile (personal or restaurant)
-- [ ] Adding a new profile adds a new favs section to existing profiles
+- [x] Adding a new profile adds a new favs section to existing profiles
 
 ---Appearance---
 - [x] Update the jumbotron with icons
 - [x] style profiles
-- [ ] Update colors
-- [ ] Change the font
-- [ ] Place restaurants and profiles in different columns
+- [x] Update colors
+- [x] Change the font
+- [x] Place restaurants and profiles in different columns
 - [ ] Change the description input box to begin typing at the top of the box rather than the middle
-- [ ] Style buttons
-- [ ] The boxes for the profiles are acting funky depending on the amount of text in them. Need to adjust flex-box so they stay a regular size.
+- [x] Style buttons
+- [x] The boxes for the profiles are acting funky depending on the amount of text in them. Need to adjust flex-box so they stay a regular size.
 
 
 ##Timeline
@@ -39,13 +39,15 @@ Social media platform to connect with friends over food. Write reviews, favorite
  Styled profiles on 2/12
  Updated colors and font on 2/12
  Styled buttons on 2/12
+ Fixed favorites bugs on 2/12
+ Added ability to load other profiles in localstorage on page load on 2/12
 
 
 
 ----To Do Still
+ 2/13 - remove fav restaurant from user
+ 2/13 - add multiple restuarants to user
  2/13 - type in the middle of the input box
- 2/13 - fix bugs with favorites button
- 2/14 - Load local storage on page load
  2/14 - Upload an image
 
 
