@@ -68,15 +68,22 @@ $(document).ready(function() {
         $('.new-restaurant').css({ 'display': 'none' });
     });
 
+
     $(document).on('click', '.fav', function(e) {
         var tempData = $(".restaurant-profile-name").html();
         tempData = tempData.replace('fav', 'remove-fav');
         tempData = tempData.replace('Add to favorites', 'Remove from favorites');
+        //tempData = '<div>'
         $(".favorites").append(tempData);
         $(".fav").css({ 'display': 'none' });
 
-
     });
+
+     $(document).on('click', '.remove-fav', function(e){
+      $('.favorites').html('');
+      $('.favorites').prepend('<div class="favorites"><h3>Favorites</h3></div>');
+      $('.fav').css({ 'display': 'inline' });
+    })
 
     $('.btn-clear').click(function() {
         localStorage.clear();

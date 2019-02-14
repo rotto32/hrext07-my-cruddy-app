@@ -9,7 +9,7 @@ Social media platform to connect with friends over food. Write reviews, favorite
 - [x] Ability to create multiple personal profiles
 - [x] Load pre-existing data onto page on page load
 - [ ] Using the 'Delete everything' button removes the divs which have users and restaurants appended to them, so unable to add more stuff after using the delete button. Need to fix
-- [ ] Remove favorite from user
+- [x] Remove favorite from user
 - [ ] Adding to favorites only adds first restaurant, and adds to all profiles
 
 ---Minor----
@@ -17,6 +17,9 @@ Social media platform to connect with friends over food. Write reviews, favorite
 - [ ] Add the ability to upload an image
 - [x] Add a div around each profile (personal or restaurant)
 - [x] Adding a new profile adds a new favs section to existing profiles
+- [ ] Need to fix bug where new users aren't being added to the page except on re-load
+- [ ] Need to fix bug where re-loading the page doesn't keep the most recent profile as the current user
+- [ ] Bug where re-adding restaurant after deleting adds it twice
 
 ---Appearance---
 - [x] Update the jumbotron with icons
@@ -41,14 +44,16 @@ Social media platform to connect with friends over food. Write reviews, favorite
  Styled buttons on 2/12
  Fixed favorites bugs on 2/12
  Added ability to load other profiles in localstorage on page load on 2/12
+ Added functionality to remove button on 2/14
 
 
 
 ----To Do Still
- 2/13 - remove fav restaurant from user
- 2/13 - add multiple restuarants to user
- 2/13 - type in the middle of the input box
- 2/14 - Upload an image
+ 2/14 - fix bugs with default user and current users
+ 2/14 - remove fav restaurant from user
+ 2/14 - add multiple restuarants to user
+ 2/14 - type in the middle of the input box
+ 2/15 - Upload an image
 
 
 ### MVP Reqs
