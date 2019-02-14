@@ -13,12 +13,12 @@ $(document).ready(function() {
             for (var prop in localStorage) {
                 if (prop !== "length" && prop !== "key" && prop !== "setItem" && prop !== "getItem" && prop !== "removeItem" && prop !== "clear") {
                   if (count < localStorage.length){
-                    console.log(count);
+                  
                     $('.other-users').append('<div class="user-profile-name"><h3>' + prop + '</h3><p>' + localStorage[prop] + '</p></div>');
                   } else {
-                    console.log(count);
+                   
                     $('.your-profile').html('');
-                    $('.your-profile').append('<div class="user-profile-name"><h3>' + prop + '</h3><p>' + localStorage[prop] + '</p><div class="favorites"><h3>Favorites</h3></div></div>');
+                    $('.your-profile').append('<div class="user-profile-name"><h3>' + prop + '</h3><p>' + localStorage[prop] + '</p><button class="update">Update Profile</button><div class="favorites"><h3>Favorites</h3></div></div>');
 
                   }
                     //console.log(count);
@@ -42,7 +42,7 @@ $(document).ready(function() {
         $('.btn-add-person').css({ 'display': 'none' });
         $('.new-restaurant').css({ 'display': 'block' });
         $('.your-profile').html('');
-        $('.your-profile').append('<div class="user-profile-name"><h3>' + profileName + '</h3><p>' + profileDescription + '</p><div class="favorites"><h3>Favorites</h3></div></div>');
+        $('.your-profile').append('<div class="user-profile-name"><h3>' + profileName + '</h3><p>' + profileDescription + '</p><button class="update">Update Profile</button><div class="favorites"><h3>Favorites</h3></div></div>');
 
     });
 
@@ -77,12 +77,35 @@ $(document).ready(function() {
         $('.new-restaurant').css({ 'display': 'none' });
     });
 
+    $(document).on('click', '.update', function(e){
+      $('.update').css({'display': 'none'});
+      $('.your-profile').prepend('<div class="add-new-description"><input type="text" class="new-description" placeholder="What\'s new?"><button class="update-profile">Update</button><button class="cancel">Cancel</button></div>');
+
+    });
+
+    $(document).on('click', '.update-profile', function(e){
+      var tempProfile = $('.user-profile-name').html();
+      var indexEnd = tempProfile.search('</');
+      tempProfile = tempProfile.slice(0, indexEnd);
+      tempProfile = tempProfile.slice(4);
+      var newDescription = $('.new-description').val();
+      console.log(newDescription);
+      localStorage.setItem(tempProfile, newDescription);
+      $('.your-profile').html('');
+      $('.your-profile').append('<div class="user-profile-name"><h3>' + tempProfile + '</h3><p>' + newDescription + '</p><button class="update">Update Profile</button><div class="favorites"><h3>Favorites</h3></div></div>');
+    });
+
+    $(document).on('click', '.cancel', function(e){
+      $('.add-new-description').html('');
+
+    });
+
 
     $(document).on('click', '.fav', function(e) {
         var tempData = $(".restaurant-profile-name").html();
         tempData = tempData.replace('fav', 'remove-fav');
         tempData = tempData.replace('Add to favorites', 'Remove from favorites');
-        //tempData = '<div>'
+        //console.log(tempData);
         $(".favorites").append(tempData);
         $(".fav").css({ 'display': 'none' });
 
@@ -90,13 +113,14 @@ $(document).ready(function() {
 
      $(document).on('click', '.remove-fav', function(e){
       $('.favorites').html('');
-      $('.favorites').prepend('<div class="favorites"><h3>Favorites</h3></div>');
+      $('.favorites').prepend('<h3>Favorites</h3>');
       $('.fav').css({ 'display': 'inline' });
     })
 
     $('.btn-clear').click(function() {
         localStorage.clear();
-        $('.container-data').text('');
+        $('.other-users').text('');
+        //$(document).reload();
     });
 
 });

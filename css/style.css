@@ -1,5 +1,5 @@
 body{
-	background-color: rgba(10, 200, 214, 0.5);
+	/*background-color: rgba(10, 200, 214, 0.5);*/
 		
 }
 
@@ -7,6 +7,7 @@ button{
 	background-color: rgb(245, 168, 24);
 	height: 30px;
 	border-radius: 5px;
+	margin: 5px;
 }
 
 button:hover{
@@ -15,12 +16,17 @@ button:hover{
 
 }
 
+.container-main{
+	background-color: rgba(10, 200, 214, 0.5);
+}
+
 .title{
 	display: flex;
 	font-size: 48px;
 	justify-content: space-around;
 	align-items: center;
-	background-color: rgba(10, 200, 214, 1);
+	/*background-color: rgba(10, 200, 214, 1);*/
+	background-color: white;
 	border: 5px black solid;
 	font-family: 'Anton', sans-serif;
 
@@ -32,7 +38,11 @@ button:hover{
 }
 
 .input-description {
-	height: 200px;
+	height: 50px;
+}
+
+.new-description {
+	height: 50px;
 }
 
 .container-form{
@@ -88,5 +98,6 @@ button:hover{
 
 footer{
 	background-color: rgb(245, 168, 24);
+	padding: 10px;
 }
 
