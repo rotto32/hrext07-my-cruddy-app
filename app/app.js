@@ -7,14 +7,23 @@ interact with localstorage
 
 $(document).ready(function() {
 
-    $(window).on('load', function(e) {
+ $(window).on('load', function(e) {
+  var count = 1;
         if (localStorage.length > 0) {
             for (var prop in localStorage) {
                 if (prop !== "length" && prop !== "key" && prop !== "setItem" && prop !== "getItem" && prop !== "removeItem" && prop !== "clear") {
-
+                  if (count < localStorage.length){
+                    console.log(count);
                     $('.other-users').append('<div class="user-profile-name"><h3>' + prop + '</h3><p>' + localStorage[prop] + '</p></div>');
-                }
+                  } else {
+                    console.log(count);
+                    $('.your-profile').html('');
+                    $('.your-profile').append('<div class="user-profile-name"><h3>' + prop + '</h3><p>' + localStorage[prop] + '</p><div class="favorites"><h3>Favorites</h3></div></div>');
 
+                  }
+                    //console.log(count);
+                }
+                count++;
             }
 
         }
