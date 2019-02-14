@@ -10,7 +10,7 @@ Social media platform to connect with friends over food. Write reviews, favorite
 - [x] Load pre-existing data onto page on page load
 - [x] Using the 'Delete everything' button removes the divs which have users and restaurants appended to them, so unable to add more stuff after using the delete button. Need to fix
 - [x] Remove favorite from user
-- [ ] Adding to favorites only adds first restaurant, and adds to all profiles
+- [x] Adding to favorites only adds first restaurant, and adds to all profiles
 - [x] Add an Update button on main profile
 
 ---Minor----
@@ -21,6 +21,7 @@ Social media platform to connect with friends over food. Write reviews, favorite
 - [ ] Need to fix bug where new users aren't being added to the page except on re-load
 - [x] Need to fix bug where re-loading the page doesn't keep the most recent profile as the current user
 - [x] Bug where re-adding restaurant after deleting adds it twice
+- [ ] On reload the page is no longer adding a user from local storage to the 'your profile' section
 
 ---Appearance---
 - [x] Update the jumbotron with icons
