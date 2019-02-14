@@ -48,6 +48,7 @@ Social media platform to connect with friends over food. Write reviews, favorite
  Added functionality to remove button on 2/14
  Updated page to grab to display a user from localStorage on the 'your profile' section instead of default pn 2/14
  fixed bug with remove button on 2/14
+ Fixed issue with users and restaurants not being sorted into the correct column on 2/14
 
 
 
