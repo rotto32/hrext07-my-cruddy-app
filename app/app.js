@@ -19,7 +19,7 @@ $(document).ready(function() {
 
                     if (prop[0] === "u") {
                       $('.your-profile').html('');
-                      $('.your-profile').append('<div class="user-profile-name"><h3>' + prop.slice(2) + '</h3><p>' + localStorage[prop] + '</p><button class="update">Update Profile</button><div class="favorites"><h3>Favorites</h3></div></div>');
+                      $('.your-profile').append('<div class="user-profile-name"><h3>' + prop.slice(2) + '</h3><p>' + localStorage[prop] + '</p><button class="update">Update Profile</button><button class="delete">Delete Profile</button><div class="favorites"><h3>Favorites</h3></div></div>');
                     } else if (prop[0] === "r"){
                       $('.restaurants').append('<div class="restaurant-profile-name"><div class='+id+'><h3>' + prop.slice(2) + '</h3> <p>' + localStorage[prop] + '</p><button class="fav" id=b:'+id+'>Add to favorites</button></div></div>');
                     }
@@ -53,7 +53,7 @@ $(document).ready(function() {
         $('.btn-add-person').css({ 'display': 'none' });
         $('.new-restaurant').css({ 'display': 'block' });
         $('.your-profile').html('');
-        $('.your-profile').append('<div class="user-profile-name"><h3>' + profileName + '</h3><p>' + profileDescription + '</p><button class="update">Update Profile</button><div class="favorites"><h3>Favorites</h3></div></div>');
+        $('.your-profile').append('<div class="user-profile-name"><h3>' + profileName + '</h3><p>' + profileDescription + '</p><button class="update">Update Profile</button><button class="delete">Delete Profile</button><div class="favorites"><h3>Favorites</h3></div></div>');
 
     });
 
@@ -90,9 +90,16 @@ $(document).ready(function() {
         $('.new-restaurant').css({ 'display': 'none' });
     });
 
+    $(document).on('click', '.delete', function(e){
+      $(".your-profile").text('');
+      $(".your-profile").append('<p>Nothing here yet! Create a profile above.');
+
+
+    });
+
     $(document).on('click', '.update', function(e){
       $('.update').css({'display': 'none'});
-      $('.your-profile').prepend('<div class="add-new-description"><input type="text" class="new-description" placeholder="What\'s new?"><button class="update-profile">Update</button><button class="cancel">Cancel</button></div>');
+      $('.your-profile').prepend('<div class="add-new-description"><input type="text" class="new-description" placeholder="What\'s new?"><button class="update-profile">Update</button><button class="delete">Delete Profile</button><button class="cancel">Cancel</button></div>');
 
     });
 
@@ -101,11 +108,12 @@ $(document).ready(function() {
       var indexEnd = tempProfile.search('</');
       tempProfile = tempProfile.slice(0, indexEnd);
       tempProfile = tempProfile.slice(4);
+      tempProfile = tempProfile;
       var newDescription = $('.new-description').val();
       //console.log(newDescription);
-      localStorage.setItem(tempProfile, newDescription);
+      localStorage.setItem("u:" + tempProfile, newDescription);
       $('.your-profile').html('');
-      $('.your-profile').append('<div class="user-profile-name"><h3>' + tempProfile + '</h3><p>' + newDescription + '</p><button class="update">Update Profile</button><div class="favorites"><h3>Favorites</h3></div></div>');
+      $('.your-profile').append('<div class="user-profile-name"><h3>' + tempProfile + '</h3><p>' + newDescription + '</p><button class="update">Update Profile</button><button class="delete">Delete Profile</button><div class="favorites"><h3>Favorites</h3></div></div>');
     });
 
     $(document).on('click', '.cancel', function(e){
@@ -146,6 +154,7 @@ $(document).ready(function() {
     $('.btn-clear').click(function() {
         localStorage.clear();
         $('.other-users').text('');
+        $('.restaurants').text('');
         //$(document).reload();
     });
 

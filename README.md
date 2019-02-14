@@ -21,7 +21,8 @@ Social media platform to connect with friends over food. Write reviews, favorite
 - [ ] Need to fix bug where new users aren't being added to the page except on re-load
 - [x] Need to fix bug where re-loading the page doesn't keep the most recent profile as the current user
 - [x] Bug where re-adding restaurant after deleting adds it twice
-- [ ] On reload the page is no longer adding a user from local storage to the 'your profile' section
+- [x] On reload the page is no longer adding a user from local storage to the 'your profile' section
+- [ ] Favorites doesn't work if restaurant name has punctuation
 
 ---Appearance---
 - [x] Update the jumbotron with icons
@@ -50,6 +51,7 @@ Social media platform to connect with friends over food. Write reviews, favorite
  Updated page to grab to display a user from localStorage on the 'your profile' section instead of default pn 2/14
  fixed bug with remove button on 2/14
  Fixed issue with users and restaurants not being sorted into the correct column on 2/14
+ Fixed bug with default user being added to the your profile section instead of one from local storage on 2/14
 
 
 
