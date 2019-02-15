@@ -15,14 +15,14 @@ Social media platform to connect with friends over food. Write reviews, favorite
 
 ---Minor----
 - [x] Change the description input to a larger text input box
-- [ ] Add the ability to upload an image
 - [x] Add a div around each profile (personal or restaurant)
 - [x] Adding a new profile adds a new favs section to existing profiles
-- [ ] Need to fix bug where new users aren't being added to the page except on re-load
+- [x] Need to fix bug where new users aren't being added to the page except on re-load
 - [x] Need to fix bug where re-loading the page doesn't keep the most recent profile as the current user
 - [x] Bug where re-adding restaurant after deleting adds it twice
 - [x] On reload the page is no longer adding a user from local storage to the 'your profile' section
 - [ ] Favorites doesn't work if restaurant name has punctuation
+- [ ] Add a button to move to profile
 
 ---Appearance---
 - [x] Update the jumbotron with icons
@@ -30,7 +30,6 @@ Social media platform to connect with friends over food. Write reviews, favorite
 - [x] Update colors
 - [x] Change the font
 - [x] Place restaurants and profiles in different columns
-- [ ] Change the description input box to begin typing at the top of the box rather than the middle
 - [x] Style buttons
 - [x] The boxes for the profiles are acting funky depending on the amount of text in them. Need to adjust flex-box so they stay a regular size.
 
@@ -52,15 +51,14 @@ Social media platform to connect with friends over food. Write reviews, favorite
  fixed bug with remove button on 2/14
  Fixed issue with users and restaurants not being sorted into the correct column on 2/14
  Fixed bug with default user being added to the your profile section instead of one from local storage on 2/14
+ fix bugs with default user and current users on 2/15
+ added multiple restuarants to user on 2/15
 
 
 
 ----To Do Still
- 2/14 - fix bugs with default user and current users
- 2/14 - add multiple restuarants to user
- 2/14 - type in the middle of the input box
- 2/15 - Upload an image
-
+2/15 - add select button to profiles
+2/15 - add ability to add profiles with punctuation
 
 ### MVP Reqs
 - [ ] Ability to add Profile/Restaurant
