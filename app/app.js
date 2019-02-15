@@ -14,7 +14,7 @@ $(document).ready(function() {
                 if (prop !== "length" && prop !== "key" && prop !== "setItem" && prop !== "getItem" && prop !== "removeItem" && prop !== "clear") {
                     var id = prop.split(' ');
                     id = id[0].toLowerCase();
-                    id = id.replace(":", "-")
+                    id = id.replace(":", "-");
                     if (count === 0) {
                         if (prop[0] === "u") {
                             $('.your-profile').html('');
@@ -25,7 +25,7 @@ $(document).ready(function() {
                         }
                     } else if (count > 0) {
                         if (prop[0] === "u") {
-                            $('.other-users').append('<div class="user-profile-name"><h3>' + prop.slice(2) + '</h3><p>' + localStorage[prop] + '</p></div>');
+                            $('.other-users').append('<div class="user-profile-name" id='+id+'><h3>' + prop.slice(2) + '</h3><p>' + localStorage[prop] + '</p><button class="select-profile" id=p:'+id+'>Select</button></div>');
                         } else if (prop[0] === "r") {
                             $('.restaurants').append('<div class="restaurant-profile-name"><div class=' + id + '><h3>' + prop.slice(2) + '</h3> <p>' + localStorage[prop] + '</p><button class="fav" id=b:' + id + '>Add to favorites</button></div></div>');
                         }
@@ -44,6 +44,7 @@ $(document).ready(function() {
 
 
     $('.btn-add-person').on('click', function(e) {
+
         var profileName = $('.input-name').val();
         var profileDescription = $('.input-description').val();
         var profileKey = "u:" + profileName;
@@ -60,10 +61,14 @@ $(document).ready(function() {
 
         if (localStorage.length > 1) {
           $('.other-users').html('<h3>Other Users</h3>');
+          console.log(profileKey);
             for (var prop in localStorage) {
+              var id = prop.split(' ');
+                    id = id[0].toLowerCase();
+                    id = id.replace(":", "-");
                 if (prop !== "length" && prop !== "key" && prop !== "setItem" && prop !== "getItem" && prop !== "removeItem" && prop !== "clear" && prop !== profileKey) {
                     if (prop[0] === "u") {
-                        $('.other-users').append('<div class="user-profile-name"><h3>' + prop.slice(2) + '</h3><p>' + localStorage[prop] + '</p></div>');
+                        $('.other-users').append('<div class="user-profile-name" id='+id+'><h3>' + prop.slice(2) + '</h3><p>' + localStorage[prop] + '</p><button class="select-profile" id=p:'+id+'>Select</button></div>');
                     }
                 }
             }
@@ -72,6 +77,9 @@ $(document).ready(function() {
 
 
     $('.btn-add-restaurant').on('click', function(e) {
+      var id = prop.split(' ');
+                    id = id[0].toLowerCase();
+                    id = id.replace(":", "-");
         var profileName = $('.input-name').val();
         var profileDescription = $('.input-description').val();
         var id = profileName.split(' ');
@@ -163,16 +171,16 @@ $(document).ready(function() {
         var buttonId = $(this).attr('id');
         buttonId = buttonId.slice(2);
         buttonId = '.' + buttonId;
-        console.log(buttonId);
+        
 
         var tempData = $(buttonId).html();
-        console.log(tempData);
+        
         tempData = tempData.replace('fav', 'remove-fav');
         tempData = tempData.replace('Add to favorites', 'Remove from favorites');
         //console.log($(".restaurant-profile-name"));
         tempData = '<div class=' + buttonId.slice(1) + '-fav>' + tempData;
         tempData = tempData + '</div>';
-        console.log(tempData);
+       
         $(".favorites").append(tempData);
         //$(".fav").css({ 'display': 'none' });
 
@@ -184,14 +192,38 @@ $(document).ready(function() {
         buttonId = '.' + buttonId + '-fav';
         console.log(buttonId);
         $(buttonId).html('');
-        //$('.favorites').prepend('<h3>Favorites</h3>');
-        //$('.fav').css({ 'display': 'inline' });
     });
 
-    // $(document).on('click', '.select-profile', function(e){
-    //  console.log(this);
+    $(document).on('click', '.select-profile', function(e){
+     var itemId = $(this).attr('id');
+     itemId = itemId.slice(2);
+     itemId = "#"+ itemId;
+     //console.log(itemId);
 
-    // });
+
+     var tempProfile = $(itemId).html();
+
+        var indexEnd = tempProfile.search('</');
+        tempProfile = tempProfile.slice(0, indexEnd);
+        tempProfile = tempProfile.slice(4);
+        tempProfile = "u:"+ tempProfile;
+        console.log(tempProfile);
+        $('.your-profile').html('');
+        $('.your-profile').append('<div class="user-profile-name"><h3>' + tempProfile.slice(2) + '</h3><p>' + localStorage[tempProfile] + '</p><button class="update">Update Profile</button><button class="delete">Delete Profile</button><div class="favorites"><h3>Favorites</h3></div></div>');
+        $('.other-users').html('<h3>Other Users</h3>');
+         
+            for (var prop in localStorage) {
+              var id = prop.split(' ');
+                    id = id[0].toLowerCase();
+                    id = id.replace(":", "-");
+                if (prop !== "length" && prop !== "key" && prop !== "setItem" && prop !== "getItem" && prop !== "removeItem" && prop !== "clear" && prop !== tempProfile) {
+                    if (prop[0] === "u") {
+                        $('.other-users').append('<div class="user-profile-name" id='+id+'><h3>' + prop.slice(2) + '</h3><p>' + localStorage[prop] + '</p><button class="select-profile" id=p:'+id+'>Select</button></div>');
+                    }
+                }
+            }
+        
+    });
 
     $('.btn-clear').click(function() {
         localStorage.clear();

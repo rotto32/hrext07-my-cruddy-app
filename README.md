@@ -22,7 +22,7 @@ Social media platform to connect with friends over food. Write reviews, favorite
 - [x] Bug where re-adding restaurant after deleting adds it twice
 - [x] On reload the page is no longer adding a user from local storage to the 'your profile' section
 - [ ] Favorites doesn't work if restaurant name has punctuation
-- [ ] Add a button to move to profile
+- [x] Add a button to move to profile
 
 ---Appearance---
 - [x] Update the jumbotron with icons
@@ -53,11 +53,11 @@ Social media platform to connect with friends over food. Write reviews, favorite
  Fixed bug with default user being added to the your profile section instead of one from local storage on 2/14
  fix bugs with default user and current users on 2/15
  added multiple restuarants to user on 2/15
+ added ability to select other users on 2/15
 
 
 
 ----To Do Still
-2/15 - add select button to profiles
 2/15 - add ability to add profiles with punctuation
 
 ### MVP Reqs
