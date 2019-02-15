@@ -66,6 +66,10 @@ button:hover{
 	display: none;
 }
 
+.btn-cancel-add{
+	display: none;
+}
+
 .buttons {
 	display: flex;
 }

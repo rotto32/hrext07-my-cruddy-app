@@ -52,9 +52,11 @@ $(document).ready(function() {
         $('.inputs').css({ 'display': 'none' });
         $('.btn-add-person').css({ 'display': 'none' });
         $('.new-restaurant').css({ 'display': 'block' });
+        $('.btn-cancel-add').css({'display': 'none'});
         $('.your-profile').html('');
         $('.your-profile').append('<div class="user-profile-name"><h3>' + profileName + '</h3><p>' + profileDescription + '</p><button class="update">Update Profile</button><button class="delete">Delete Profile</button><div class="favorites"><h3>Favorites</h3></div></div>');
-
+        $('.input-key').val('');
+        $('.input-value').val('');
     });
 
 
@@ -68,31 +70,47 @@ $(document).ready(function() {
         $('.inputs').css({ 'display': 'none' });
         $('.btn-add-restaurant').css({ 'display': 'none' });
         $('.new-restaurant').css({ 'display': 'block' });
+        $('.btn-cancel-add').css({'display': 'none'});
         $('.restaurants').append('<div class="restaurant-profile-name"><div class='+id+'><h3>' + profileName + '</h3> <p>' + profileDescription + '</p><button class="fav" id=b:'+id+'>Add to favorites</button></div></div>');
+        $('.input-key').val('');
+        $('.input-value').val('');
     });
 
     $('.new-profile').on('click', function(e) {
-        //console.log(e);
         $('.inputs').css({ 'display': 'flex' });
         $('.btn-add-person').css({ 'display': 'block' });
         $('.new-profile').css({ 'display': 'none' });
         $('.new-restaurant').css({ 'display': 'none' });
         $('.fav').css({ 'display': 'inline' });
+        $('.btn-cancel-add').css({'display': 'inline'});
 
 
     });
 
     $('.new-restaurant').on('click', function(e) {
-        //console.log(e);
+      
         $('.inputs').css({ 'display': 'flex' });
         $('.btn-add-restaurant').css({ 'display': 'block' });
         $('.new-profile').css({ 'display': 'none' });
         $('.new-restaurant').css({ 'display': 'none' });
+        $('.btn-cancel-add').css({'display': 'inline'});
+    });
+
+
+    $('.btn-cancel-add').on('click', function(e) {
+     
+      $('.inputs').css({ 'display': 'none' });
+        $('.btn-add-restaurant').css({ 'display': 'none' });
+        $('.btn-add-person').css({ 'display': 'none' });
+        $('.new-profile').css({ 'display': 'inline' });
+        $('.new-restaurant').css({ 'display': 'inline' });
+        $('.btn-cancel-add').css({'display': 'none'});
+
     });
 
     $(document).on('click', '.delete', function(e){
       $(".your-profile").text('');
-      $(".your-profile").append('<p>Nothing here yet! Create a profile above.');
+      $(".your-profile").append('<p>Nothing here yet! Create a profile above.</p>');
 
 
     });
